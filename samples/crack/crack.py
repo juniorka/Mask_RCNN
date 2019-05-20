@@ -551,7 +551,7 @@ if __name__ == '__main__':
         # Start from ImageNet trained weights
         model_path = model.get_imagenet_weights()
     else:
-        model_path = args.weights
+        model_path = args.model
 
     # Load weights
     print("Loading weights ", model_path)
