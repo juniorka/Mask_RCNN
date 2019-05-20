@@ -122,10 +122,10 @@ class CrackDataset(utils.Dataset):
         return_crack: If True, returns the COCO object.
         """
 
-        crack = COCO("{}\\annotations\\instances_{}{}.json".format(dataset_dir, subset, year))
+        crack = COCO("{}/annotations/instances_{}{}.json".format(dataset_dir, subset, year))
         if subset == "minival" or subset == "valminusminival":
             subset = "val"
-        image_dir = "{}\\{}{}".format(dataset_dir, subset, year)
+        image_dir = "{}/{}{}".format(dataset_dir, subset, year)
 
         # Load all classes or a subset?
         if not class_ids:
